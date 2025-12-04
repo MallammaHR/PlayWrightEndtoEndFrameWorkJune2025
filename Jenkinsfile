@@ -52,20 +52,20 @@ pipeline {
         // ============================================
         // Static Code Analysis (ESLint)
         // ============================================
-        stage('🔍 ESLint Analysis') {
+        stage('ESLint Analysis') {
             steps {
                 echo '============================================'
-                echo '📥 Installing dependencies...'
+                echo 'Installing dependencies...'
                 echo '============================================'
                 sh 'npm ci'
 
                 echo '============================================'
-                echo '📁 Creating ESLint report directory...'
+                echo 'Creating ESLint report directory...'
                 echo '============================================'
                 sh 'mkdir -p eslint-report'
 
                 echo '============================================'
-                echo '🔍 Running ESLint...'
+                echo ' Running ESLint...'
                 echo '============================================'
                 script {
                     def eslintStatus = sh(script: 'npm run lint', returnStatus: true)
@@ -125,7 +125,7 @@ pipeline {
                 }
 
                 echo '============================================'
-                echo '🏷️ Adding Allure environment info...'
+                echo 'Adding Allure environment info...'
                 echo '============================================'
                 sh '''
                     mkdir -p allure-results
@@ -183,7 +183,7 @@ pipeline {
         // ============================================
         // QA Environment Tests
         // ============================================
-        stage('🔍 QA Tests') {
+        stage(' QA Tests') {
             steps {
                 echo '============================================'
                 echo '🧹 Cleaning previous results...'
@@ -259,7 +259,7 @@ pipeline {
         // ============================================
         // STAGE Environment Tests
         // ============================================
-        stage('🎯 STAGE Tests') {
+        stage(' STAGE Tests') {
             steps {
                 echo '============================================'
                 echo '🧹 Cleaning previous results...'
@@ -335,7 +335,7 @@ pipeline {
         // ============================================
         // PROD Environment Tests
         // ============================================
-        stage('🚀 PROD Tests') {
+        stage(' PROD Tests') {
             steps {
                 echo '============================================'
                 echo '🧹 Cleaning previous results...'
@@ -411,7 +411,7 @@ pipeline {
         // ============================================
         // Generate Combined Allure Report (All Environments)
         // ============================================
-        stage('📈 Combined Allure Report') {
+        stage('Combined Allure Report') {
             steps {
                 echo '============================================'
                 echo '📊 Generating Combined Allure Report...'
@@ -455,7 +455,7 @@ pipeline {
     post {
         always {
             echo '============================================'
-            echo '📬 PIPELINE SUMMARY'
+            echo ' PIPELINE SUMMARY'
             echo '============================================'
 
             script {
