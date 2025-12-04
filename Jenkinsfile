@@ -92,7 +92,7 @@ pipeline {
                         if (env.ESLINT_STATUS == 'failure') {
                             echo '⚠️ ESLint found issues - check the HTML report'
                         } else {
-                            echo '✅ No ESLint issues found'
+                            echo ' No ESLint issues found'
                         }
                     }
                 }
@@ -267,7 +267,7 @@ pipeline {
                 sh 'rm -rf allure-results playwright-report playwright-html-report test-results'
 
                 echo '============================================'
-                echo '🧪 Running STAGE tests...'
+                echo ' Running STAGE tests...'
                 echo '============================================'
                 script {
                     env.STAGE_TEST_STATUS = sh(
@@ -505,7 +505,7 @@ ${prodEmoji} PROD:  ${prodStatus}
         }
 
         success {
-            echo '✅ Pipeline completed successfully!'
+            echo ' Pipeline completed successfully!'
 
             script {
                 // Slack notification
