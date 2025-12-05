@@ -33,6 +33,11 @@ jobs:
       - name: Run Playwright Tests
         run: npx playwright test tests/loginpage.spec.ts --config=playwright.config.ts
 
+      # ✅ 5.1 Generate Playwright HTML Reporter (this is the missing step!)
+      - name: Generate Playwright HTML Reporter
+        run: |
+        
+          npx playwright show-report --output=playwright-html-report
       # 6️⃣ Generate Allure HTML Report
       - name: Generate Allure Report
         if: always()
