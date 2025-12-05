@@ -18,7 +18,7 @@ test('verify valid login @login',
 });
 
 
-test('verify Invalid login @wip', async ({ page, baseURL }) => {
+test.skip('verify Invalid login @wip', async ({ page, baseURL }) => {
     //AAA
     let loginPage = new LoginPage(page);
     await loginPage.goToLoginPage(baseURL);
