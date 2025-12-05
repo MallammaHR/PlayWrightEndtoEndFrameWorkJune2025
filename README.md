@@ -3,6 +3,9 @@
 Welcome to the **PWJune2025FrameWork** automation project. Below you can find the latest test results and HTML reports.
 
 ---
+# Dashboard Page 🏠
+[![Playwright Tests](https://github.com/ShashikantBodke/PlaywrightTypeScriptFW2025/actions/workflows/manual-run.yml/badge.svg)](https://shashikantbodke.github.io/PlaywrightTypeScriptFW2025/)
+
 
 ## Workflow Status
 
@@ -14,9 +17,10 @@ Welcome to the **PWJune2025FrameWork** automation project. Below you can find th
 
 Click the badges below to view the latest reports published via GitHub Pages:
 
-[![Playwright Report](https://MallammaHR.github.io/PWJune2025FrameWork/playwright-report/index.html)    
-[![Playwright HTML Reporter](https://MallammaHR.github.io/PWJune2025FrameWork/playwright-html-report/index.html)
-[![Allure Report](https://MallammaHR.github.io/PWJune2025FrameWork/allure-report/index.html)
+[![Playwright Report](https://img.shields.io/badge/Playwright-Report-blue)](https://MallammaHR.github.io/PWJune2025FrameWork/playwright-report/index.html) 
+[![Playwright HTML Reporter](https://img.shields.io/badge/Playwright_HTML-Report-green)](https://MallammaHR.github.io/PWJune2025FrameWork/playwright-html-report/index.html)
+[![Allure Report](https://img.shields.io/badge/Allure-Report-red)](https://MallammaHR.github.io/PWJune2025FrameWork/allure-report/index.html)
+
 
 ---
 
