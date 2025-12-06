@@ -828,7 +828,8 @@ ${env.PROD_EMOJI ?: '❓'} PROD: ${env.PROD_TEST_STATUS ?: 'not run'}
 📊 <${env.BUILD_URL}allure|View Allure Report>
 🔗 <${env.BUILD_URL}|View Build>"""
                     )
-                } catch (Exception e) {
+                } 
+                catch (Exception e) {
                     echo "Slack notification failed: ${e.message}"
                 }
             }
