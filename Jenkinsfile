@@ -29,7 +29,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'NodeJS-20'
+        nodejs 'nodejs20'
     }
 
     environment {
@@ -811,6 +811,18 @@ ${env.PROD_EMOJI ?: '❓'} PROD: ${env.PROD_TEST_STATUS ?: 'not run'}
                 }
             }
         }
+        stage('Notify Slack') {
+    steps {
+        withCredentials([string(credentialsId: 'SLACK_WEBHOOK_SECRET', variable: 'WEBHOOK')]) {
+            sh """
+            curl -X POST -H 'Content-type: application/json' \
+            --data '{\"text\": \"❌ Pipeline Failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}\"}' \
+            $WEBHOOK
+            """
+        }
+    }
+}
+
 
         unstable {
             echo '⚠️ Pipeline completed with warnings!'
