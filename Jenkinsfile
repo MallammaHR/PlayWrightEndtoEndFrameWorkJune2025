@@ -48,11 +48,7 @@ pipeline {
         disableConcurrentBuilds()
     }
 
-    stages {
-        // ============================================
-        // Static Code Analysis (ESLint)
-        // ============================================
-        stage('🔍 ESLint Analysis') {
+    stage('🔍 ESLint Analysis') {
     steps {
         echo '============================================'
         echo '📥 Installing dependencies...'
@@ -60,9 +56,9 @@ pipeline {
         bat 'npm ci'
 
         echo '============================================'
-        echo '📁 Creating ESLint report directory...'
+        echo '📁 Generating ESLint HTML report...'
         echo '============================================'
-        bat 'npm run lint:report'
+        bat 'npm run lint:report || true'
 
         echo '============================================'
         echo '🔍 Running ESLint...'
@@ -71,13 +67,8 @@ pipeline {
             def eslintStatus = bat(script: 'npm run lint', returnStatus: true)
             env.ESLINT_STATUS = eslintStatus == 0 ? 'success' : 'failure'
         }
-
-        echo '============================================'
-        echo '📊 Generating ESLint HTML Report...'
-        echo '============================================'
-        bat 'npm run lint:report || true'
     }
-    
+
     post {
         always {
             publishHTML(target: [
@@ -92,7 +83,7 @@ pipeline {
 
             script {
                 if (env.ESLINT_STATUS == 'failure') {
-                    echo '⚠️ ESLint found issues - check the HTML report'
+                    echo '⚠️ ESLint found issues – review the report'
                 } else {
                     echo '✅ No ESLint issues found'
                 }
@@ -100,6 +91,7 @@ pipeline {
         }
     }
 }
+
 
 
         // ============================================
