@@ -519,7 +519,6 @@ ${env.PROD_EMOJI ?: '✅'} PROD: ${env.PROD_TEST_STATUS}
                     slackSend(
                         channel: '#test_automation1',
                         color: 'danger',
-                        tokenCredentialId: 'SLACK_WEBHOOK_SECRET',
                         message: """❌ *Playwright Pipeline: Tests Failed*
 *Repository:* ${env.JOB_NAME}
 *Build:* #${env.BUILD_NUMBER}
