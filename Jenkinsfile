@@ -38,9 +38,8 @@ pipeline {
                 echo '============================================'
                 echo '📁 Generating ESLint HTML report...'
                 echo '============================================'
-                bat label: 'Generate ESLint HTML Report', script: '''
-                npm run lint:report || echo "⚠️ ESLint report generation failed - continuing"
-                '''
+                bat label: 'Generate ESLint HTML Report', script: 'npm run lint:report || echo "⚠️ ESLint report generation failed - continuing"'
+
 
 
 
