@@ -28,31 +28,31 @@ pipeline {
         // ============================================
         // Static Code Analysis (ESLint)
         // ============================================
-        stage('🔍 ESLint Analysis') {
-            steps {
-                echo '============================================'
-                echo '📥 Installing dependencies...'
-                echo '============================================'
-                bat 'npm ci'
+stage('🔍 ESLint Analysis') {
+    steps {
+        withEnv(["PUPPETEER_SKIP_DOWNLOAD=true"]) {
 
-                echo '============================================'
-                echo '📁 Generating ESLint HTML report...'
-                echo '============================================'
-                bat 'npm run lint || exit 0'
+            echo '============================================'
+            echo '📥 Installing dependencies...'
+            echo '============================================'
+            bat 'npm ci'
 
+            echo '============================================'
+            echo '📁 Generating ESLint HTML report...'
+            echo '============================================'
+            bat 'npm run lint || exit 0'
 
+            echo '============================================'
+            echo '🔍 Running ESLint...'
+            echo '============================================'
 
-
-
-                echo '============================================'
-                echo '🔍 Running ESLint...'
-                echo '============================================'
-                script {
-                    def eslintStatus = bat(script: 'npm run lint', returnStatus: true)
-                    env.ESLINT_STATUS = eslintStatus == 0 ? 'success' : 'failure'
-                }
+            script {
+                def eslintStatus = bat(script: 'npm run lint', returnStatus: true)
+                env.ESLINT_STATUS = eslintStatus == 0 ? 'success' : 'failure'
             }
-
+        }
+    }
+}
             post {
                 always {
                     publishHTML(target: [
@@ -94,7 +94,7 @@ pipeline {
                 powershell '''
                     Remove-Item -Recurse -Force -ErrorAction SilentlyContinue "allure-results-combined"
                     New-Item -ItemType Directory -Path "allure-results-combined" -Force | Out-Null
-                    '''
+                        '''
 
 
                 echo '============================================'
