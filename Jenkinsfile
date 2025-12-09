@@ -372,19 +372,22 @@ pipeline {
 
                 // Use PowerShell to merge copied environment results onto combined folder
                 bat '''
-                    powershell -NoProfile -Command "
-                        Remove-Item -Recurse -Force -ErrorAction SilentlyContinue 'allure-results-combined';
-                        New-Item -ItemType Directory -Path 'allure-results-combined' -Force | Out-Null;
-                        Copy-Item -Recurse -Force -ErrorAction SilentlyContinue 'allure-results-dev\\*' 'allure-results-combined'  -ErrorAction SilentlyContinue;
-                        Copy-Item -Recurse -Force -ErrorAction SilentlyContinue 'allure-results-qa\\*' 'allure-results-combined'  -ErrorAction SilentlyContinue;
-                        Copy-Item -Recurse -Force -ErrorAction SilentlyContinue 'allure-results-stage\\*' 'allure-results-combined'  -ErrorAction SilentlyContinue;
-                        Copy-Item -Recurse -Force -ErrorAction SilentlyContinue 'allure-results-prod\\*' 'allure-results-combined'  -ErrorAction SilentlyContinue;
-                        Set-Content -Path 'allure-results-combined\\environment.properties' -Value 'Environment=ALL (DEV, QA, STAGE, PROD)';
-                        Add-Content -Path 'allure-results-combined\\environment.properties' -Value 'Browser=Google Chrome';
-                        Add-Content -Path 'allure-results-combined\\environment.properties' -Value \"Pipeline=${env.JOB_NAME}\";
-                        Add-Content -Path 'allure-results-combined\\environment.properties' -Value \"Build=${env.BUILD_NUMBER}\";
-                        Exit 0
-                    "
+                    powershell """
+                    Remove-Item -Recurse -Force -ErrorAction SilentlyContinue 'allure-results-combined'
+                    New-Item -ItemType Directory -Path 'allure-results-combined' -Force | Out-Null
+
+                    Copy-Item -Recurse -Force -ErrorAction SilentlyContinue 'allure-results-dev\\*' 'allure-results-combined'
+                    Copy-Item -Recurse -Force -ErrorAction SilentlyContinue 'allure-results-qa\\*' 'allure-results-combined'
+                    Copy-Item -Recurse -Force -ErrorAction SilentlyContinue 'allure-results-stage\\*' 'allure-results-combined'
+                    Copy-Item -Recurse -Force -ErrorAction SilentlyContinue 'allure-results-prod\\*' 'allure-results-combined'
+
+                    Set-Content -Path 'allure-results-combined\\environment.properties' -Value 'Environment=ALL (DEV, QA, STAGE, PROD)'
+                    Add-Content -Path 'allure-results-combined\\environment.properties' -Value 'Browser=Google Chrome'
+                    Add-Content -Path 'allure-results-combined\\environment.properties' -Value "Pipeline=${env.JOB_NAME}"
+                    Add-Content -Path 'allure-results-combined\\environment.properties' -Value "Build=${env.BUILD_NUMBER}"
+
+                    exit 0
+                    """
                 '''
             }
             post {
