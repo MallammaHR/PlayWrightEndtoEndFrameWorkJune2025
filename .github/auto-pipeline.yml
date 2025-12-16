@@ -740,27 +740,27 @@ jobs:
           echo "============================================"
           echo ""
           echo "🏠 Main Dashboard:"
-          echo "   https://naveenanimation20.github.io/June2025PWFramework/"
+          echo "   https://github.com/MallammaHR/PWJune2025FrameWork/"
           echo ""
           echo "🔧 DEV Reports:"
-          echo "   Playwright: https://naveenanimation20.github.io/June2025PWFramework/dev/playwright-report/index.html"
-          echo "   HTML:       https://naveenanimation20.github.io/June2025PWFramework/dev/playwright-html-report/index.html"
-          echo "   Allure:     https://naveenanimation20.github.io/June2025PWFramework/dev/allure-report/index.html"
+          echo "   Playwright: https://mallammahr.github.io/PWJune2025FrameWork/dev/playwright-report/index.html"
+          echo "   HTML:       https://mallammahr.github.io/PWJune2025FrameWork/dev/playwright-html-report/index.html"
+          echo "   Allure:     https://mallammahr.github.io/PWJune2025FrameWork/dev/allure-report/index.html"
           echo ""
           echo "🔍 QA Reports:"
-          echo "   Playwright: https://naveenanimation20.github.io/June2025PWFramework/qa/playwright-report/index.html"
-          echo "   HTML:       https://naveenanimation20.github.io/June2025PWFramework/qa/playwright-html-report/index.html"
-          echo "   Allure:     https://naveenanimation20.github.io/June2025PWFramework/qa/allure-report/index.html"
+          echo "   Playwright: https://mallammahr.github.io/PWJune2025FrameWork/qa/playwright-report/index.html"
+          echo "   HTML:       https://mallammahr.github.io/PWJune2025FrameWork/qa/playwright-html-report/index.html"
+          echo "   Allure:     https://mallammahr.io/PWJune2025FrameWork/qa/allure-report/index.html"
           echo ""
           echo "🎯 STAGE Reports:"
-          echo "   Playwright: https://naveenanimation20.github.io/June2025PWFramework/stage/playwright-report/index.html"
-          echo "   HTML:       https://naveenanimation20.github.io/June2025PWFramework/stage/playwright-html-report/index.html"
-          echo "   Allure:     https://naveenanimation20.github.io/June2025PWFramework/stage/allure-report/index.html"
+          echo "   Playwright: https://mallammahr.github.io/PWJune2025FrameWork/stage/playwright-report/index.html"
+          echo "   HTML:       https://mallammahr.github.io/PWJune2025FrameWork/stage/playwright-html-report/index.html"
+          echo "   Allure:     https://mallammahr.github.io/PWJune2025FrameWork/stage/allure-report/index.html"
           echo ""
           echo "🚀 PROD Reports:"
-          echo "   Playwright: https://naveenanimation20.github.io/June2025PWFramework/prod/playwright-report/index.html"
-          echo "   HTML:       https://naveenanimation20.github.io/June2025PWFramework/prod/playwright-html-report/index.html"
-          echo "   Allure:     https://naveenanimation20.github.io/June2025PWFramework/prod/allure-report/index.html"
+          echo "   Playwright: https://mallammahr.github.io/PWJune2025FrameWork/prod/playwright-report/index.html"
+          echo "   HTML:       https://mallammahr.github.io/PWJune2025FrameWorkk/prod/playwright-html-report/index.html"
+          echo "   Allure:     https://mallammahr.github.io/PWJune2025FrameWork/prod/allure-report/index.html"
           echo ""
           echo "============================================"
 
@@ -873,7 +873,7 @@ jobs:
                       "type": "section",
                       "text": {
                         "type": "mrkdwn",
-                        "text": "*📊 View Reports:*\n<https://naveenanimation20.github.io/June2025PWFramework/|Test Reports Dashboard>"
+                        "text": "*📊 View Reports:*\n<https://mallammahr.github.io/PWJune2025FrameWork/|Test Reports Dashboard>"
                       }
                     },
                     {
@@ -967,16 +967,16 @@ jobs:
 
                   <h3>📊 View Reports</h3>
                   <p>
-                    <a href="https://naveenanimation20.github.io/June2025PWFramework/" class="btn">📊 Reports Dashboard</a>
+                    <a href="https://mallammahr.github.io/PWJune2025FrameWork/" class="btn">📊 Reports Dashboard</a>
                     <a href="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" class="btn">🔗 View Workflow Run</a>
                   </p>
 
                   <h4>Individual Environment Reports:</h4>
                   <ul>
-                    <li><strong>DEV:</strong> <a href="https://naveenanimation20.github.io/June2025PWFramework/dev/allure-report/">Allure</a> | <a href="https://naveenanimation20.github.io/June2025PWFramework/dev/playwright-report/">Playwright</a></li>
-                    <li><strong>QA:</strong> <a href="https://naveenanimation20.github.io/June2025PWFramework/qa/allure-report/">Allure</a> | <a href="https://naveenanimation20.github.io/June2025PWFramework/qa/playwright-report/">Playwright</a></li>
-                    <li><strong>STAGE:</strong> <a href="https://naveenanimation20.github.io/June2025PWFramework/stage/allure-report/">Allure</a> | <a href="https://naveenanimation20.github.io/June2025PWFramework/stage/playwright-report/">Playwright</a></li>
-                    <li><strong>PROD:</strong> <a href="https://naveenanimation20.github.io/June2025PWFramework/prod/allure-report/">Allure</a> | <a href="https://naveenanimation20.github.io/June2025PWFramework/prod/playwright-report/">Playwright</a></li>
+                    <li><strong>DEV:</strong> <a href="https://mallammahr.github.io/PWJune2025FrameWork/dev/allure-report/">Allure</a> | <a href="https://mallammahr.github.io/PWJune2025FrameWork/dev/playwright-report/">Playwright</a></li>
+                    <li><strong>QA:</strong> <a href="https://mallammahr.github.io/PWJune2025FrameWork/qa/allure-report/">Allure</a> | <a href="https://mallammahr.github.io/PWJune2025FrameWork/qa/playwright-report/">Playwright</a></li>
+                    <li><strong>STAGE:</strong> <a href="https://mallammahr.github.io/PWJune2025FrameWork/stage/allure-report/">Allure</a> | <a href="https://mallammahr.github.io/PWJune2025FrameWork/stage/playwright-report/">Playwright</a></li>
+                    <li><strong>PROD:</strong> <a href="https://mallammahr.github.io/PWJune2025FrameWork/prod/allure-report/">Allure</a> | <a href="https://mallammahr.github.io/PWJune2025FrameWork/prod/playwright-report/">Playwright</a></li>
                   </ul>
                 </div>
                 <div class="footer">

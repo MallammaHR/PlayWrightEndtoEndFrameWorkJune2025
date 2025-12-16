@@ -5,7 +5,6 @@ import { RegisterPage } from '../pages/RegisterPage';
 
 
 export class LoginPage{
-
 //1.page locator//object/ObjectRepository
 private readonly page:Page;
 private readonly eleUtil ;
@@ -58,6 +57,6 @@ async navigateToRegisterPage() : Promise<RegisterPage>{
      await this.eleUtil.click(this.registerLink, { force: true, timeout: 5000 }, 0);
 
      return new RegisterPage(this.page);
-}
+ }
 
 }
