@@ -150,7 +150,7 @@ jobs:
       - name: 🏷️ Add Allure environment info
         if: always()
         run: |
-          echo "Environment=DEV" > allure-results/environment.properties
+          mkdir -p allure-results && echo "Environment=DEV" > allure-results/environment.properties
           echo "Browser=Google Chrome" >> allure-results/environment.properties
           echo "Config=playwright.config.dev.ts" >> allure-results/environment.properties
           # Add parent suite label to each result file
@@ -247,7 +247,7 @@ jobs:
       - name: 🏷️ Add Allure environment info
         if: always()
         run: |
-          echo "Environment=QA" > allure-results/environment.properties
+          mkdir -p allure-results && echo "Environment=QA" > allure-results/environment.properties
           echo "Browser=Google Chrome" >> allure-results/environment.properties
           echo "Config=playwright.config.qa.ts" >> allure-results/environment.properties
           # Add parent suite label to each result file
@@ -345,7 +345,7 @@ jobs:
       - name: 🏷️ Add Allure environment info
         if: always()
         run: |
-          echo "Environment=STAGE" > allure-results/environment.properties
+          mkdir -p allure-results && echo "Environment=STAGE" > allure-results/environment.properties
           echo "Browser=Google Chrome" >> allure-results/environment.properties
           echo "Config=playwright.config.stage.ts" >> allure-results/environment.properties
           # Add parent suite label to each result file
@@ -443,7 +443,7 @@ jobs:
       - name: 🏷️ Add Allure environment info
         if: always()
         run: |
-          echo "Environment=PROD" > allure-results/environment.properties
+          mkdir -p allure-results && echo "Environment=PROD" > allure-results/environment.properties
           echo "Browser=Google Chrome" >> allure-results/environment.properties
           echo "Config=playwright.config.prod.ts" >> allure-results/environment.properties
           # Add parent suite label to each result file
