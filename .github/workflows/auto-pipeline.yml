@@ -744,7 +744,7 @@ jobs:
           echo "   https://github.com/MallammaHR/PWJune2025FrameWork/"
           echo ""
           echo "🔧 DEV Reports:"
-          echo "   Playwright: https://mallammahr.github.io/PWJune2025FrameWork/dev/playwright-report/index.html"
+          echo "   Playwright: https://mallammahr.github.io/APITestingWithPlaywrightDecembeer2025/dev/playwright-report/index.html"
           echo "   HTML:       https://mallammahr.github.io/PWJune2025FrameWork/dev/playwright-html-report/index.html"
           echo "   Allure:     https://mallammahr.github.io/PWJune2025FrameWork/dev/allure-report/index.html"
           echo ""

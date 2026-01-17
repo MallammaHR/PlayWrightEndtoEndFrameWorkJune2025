@@ -10,8 +10,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    env:
-      API_TOKEN: ${{ secrets.API_TOKEN }}
+  
 
 
     steps:

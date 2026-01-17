@@ -239,7 +239,6 @@ jobs:
       # ========== Print Report URLs ==========
       - name: 🔗 Report URLs
         run: |
-        
           ENV="${{ github.event.inputs.environment }}"
           BROWSER="${{ github.event.inputs.browser }}"
           echo "============================================"
@@ -253,8 +252,8 @@ jobs:
           echo "   https://mallammahr.github.io/PWJune2025FrameWork/"
           echo ""
           echo "📊 ${ENV^^} Reports:"
-          echo "   Playwright: https://mallammahr.github.io/APITestingWithPlaywrightDecembeer2025/${ENV}/playwright-report/index.html"
-          echo "   HTML:       https://mallammahr.github.io/APITestingWithPlaywrightDecembeer2025/${ENV}/playwright-html-report/index.html"
-          echo "   Allure:     https://mallammahr.github.io/APITestingWithPlaywrightDecembeer2025/${ENV}/allure-report/index.html"
+          echo "   Playwright: https://mallammahr.github.io/PWJune2025FrameWork/${ENV}/playwright-report/index.html"
+          echo "   HTML:       https://mallammahr.github.io/PWJune2025FrameWork/${ENV}/playwright-html-report/index.html"
+          echo "   Allure:     https://mallammahr.github.io/PWJune2025FrameWork/${ENV}/allure-report/index.html"
           echo ""
           echo "============================================"
