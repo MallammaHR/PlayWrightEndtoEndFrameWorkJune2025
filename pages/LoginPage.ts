@@ -32,7 +32,7 @@ export class LoginPage{
 
 // page actions/methods
 
-    async goToLoginPage(baseURL:string | undefined){
+    async ggitoToLoginPage(baseURL:string | undefined){
         await this.page.goto(baseURL+'?route=account/login');
     }
 
