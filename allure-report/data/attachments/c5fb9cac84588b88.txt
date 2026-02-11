@@ -1,9 +1,0 @@
-Filled text : pwtest@nal.com into element : getByRole('textbox', { name: 'E-Mail Address' })
-Filled text : test123 into element : getByRole('textbox', { name: 'Password' })
-Clicked on element : getByRole('button', { name: 'Login' })
-search key : macbook
-Filled text : macbook into element : getByRole('textbox', { name: 'Search' })
-Clicked on element : locator('#search > span.input-group-btn > button.btn')
-== product name: MacBook Air
-Clicked on element : getByRole('link', { name: 'MacBook Air' })
-waited for element to be visible 
