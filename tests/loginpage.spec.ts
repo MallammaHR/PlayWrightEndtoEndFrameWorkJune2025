@@ -13,7 +13,9 @@ import { LoginPage } from '../pages/LoginPage';
 //tagging - exclude: --grep-invert "@sanity"
 
 //AAA pattern
-test('verify valid login @login',
+
+test('verify valid login @login @sample', 
+  
     {
         annotation: [
             { type: 'epic', description: 'EPIC 100 - Design login page for Open Cart App' },
