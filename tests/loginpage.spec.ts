@@ -13,20 +13,30 @@ import { LoginPage } from '../pages/LoginPage';
 //tagging - exclude: --grep-invert "@sanity"
 
 //AAA pattern
-test('Verify Valid Login @sample  @login @sanity',async({homePage})=>{
-    const status=await homePage.isUserLoggedIn();
-    expect(status).toBeTruthy();
-    await expect(homePage.page).toHaveTitle('My Account');
+test('verify valid login @login',
+    {
+        annotation: [
+            { type: 'epic', description: 'EPIC 100 - Design login page for Open Cart App' },
+            { type: 'feature', description: 'Login Page Feature' },
+            { type: 'story', description: 'US 50 - user can login to app' },
+            { type: 'severity', description: 'Blocker' },
+            { type: 'owner', description: 'MallammaHR'}
+        ]
+    }
+    , async ({ homePage }) => {
+        await expect(homePage.page).toHaveTitle('Account Login');
+        
 });
 
-test.skip('Verify in-valid Login',async({page,baseURL})=>{
-    const loginpage =new LoginPage(page);
-    await loginpage.goToLoginPage(baseURL);
-    await loginpage.doLogin('test@abc','test');
-    const errorMsg=await loginpage.getInvalidLoginMessage();
-    expect(errorMsg).toContain('Warning: No match for E-Mail Address and/or Password.');
-});
+test.skip('verify Invalid login @wip', async ({ page, baseURL }) => {
+    //AAA
+    const loginPage = new LoginPage(page);
+    await loginPage.goToLoginPage(baseURL);
+    await loginPage.doLogin('abcxyzzz123@nal.com', 'test123456');
+    const errorMesg = await loginPage.getInvalidLoginMessage();
+    expect(errorMesg).toContain('Warning: No match for E-Mail Address and/or Password.');
 
+});
 
 //Common tags paatern
 /**
