@@ -54,7 +54,6 @@ for (const product of search) {
         expect.soft(actualProductFullDetails.get('Product Code')).toBe(product.productcode);
         expect.soft(actualProductFullDetails.get('Reward Points')).toBe(product.rewardpoints);
         expect.soft(actualProductFullDetails.get('Availability')).toBe(product.availability);
-
     });
 
 

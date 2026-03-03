@@ -32,14 +32,14 @@ export class LoginPage{
 
 // page actions/methods
 
-    async ggitoToLoginPage(baseURL:string | undefined){
+    async goToLoginPage(baseURL:string | undefined){
         await this.page.goto(baseURL+'?route=account/login');
     }
 
     async doLogin(email:string, password:string):Promise<HomePage>{
         await this.eleUtil.fill(this.emailId,email);
         await this.eleUtil.fill(this.password,password);
-        await this.eleUtil.click(this.loginBtn,{force:true, timeout:1000);
+        await this.eleUtil.click(this.loginBtn,{force:true, timeout:1000});
         return new HomePage(this.page);
     }
 
